@@ -59,6 +59,16 @@ angular.module('game')
 				
 			};
 			
+			vm.reveal = function(){
+				for(let i = 0; i < vm.keywords.length; i++){
+					if ( vm.keywordBoxes[i].value != vm.keywords[i]) {
+						vm.keywordBoxes[i].value = vm.keywords[i];
+					}
+				}
+				vm.cssClass = 'finished';
+				vm.playAgain = true;
+			}
+			
 			vm.checkIfFinished = function(){
 				if (vm.success == vm.keywords.length) {
 					vm.cssClass = 'finished';

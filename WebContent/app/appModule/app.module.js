@@ -1,1 +1,1 @@
-angular.module('appModule', ['game', 'focus-if'])
+angular.module('appModule', ['game'])
