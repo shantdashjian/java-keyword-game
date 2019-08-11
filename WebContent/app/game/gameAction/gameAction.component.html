@@ -2,7 +2,7 @@
 <h1>Java Keyword Game</h1>
 
 <div>
-	<input ng-model="vm.keyword" ng-keyup="vm.check($event)" ng-disabled="vm.playAgain"><h1><badge class="badge badge-success">{{vm.success}} of {{vm.keywords.length}}</badge> 
+	<input size="23" placeholder="Start typing Java Keyword" ng-model="vm.keyword" ng-keyup="vm.check($event)" ng-disabled="vm.playAgain"><h1><badge class="badge badge-success">{{vm.success}} of {{vm.keywords.length}}</badge> 
 	<button class="btn btn-primary" ng-show="vm.playAgain" ng-click="vm.reset()">Play Again</button>
 	<button class="btn btn-primary" ng-hide="vm.playAgain" ng-click="vm.reveal()">Reveal</button></h1>
 </div>
