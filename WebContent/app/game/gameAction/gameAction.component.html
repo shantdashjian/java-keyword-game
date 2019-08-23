@@ -12,7 +12,7 @@
 			<div>
 				<input ng-repeat="keywordBox in vm.keywordBoxes"
 					value="{{keywordBox.id}}"
-					ng-model="vm.keywordBoxes[keywordBox.id].value" disabled ng-class="vm.cssClass">
+					ng-model="vm.keywordBoxes[keywordBox.id].value" disabled ng-class="keywordBox.cssClass">
 			</div>
 		</div>
 	</div>

@@ -30,7 +30,8 @@ angular.module('game')
 				for(let i = 0; i < vm.keywords.length; i++) {
 					vm.keywordBoxes.push({
 						id : i,
-						value : '             '
+						value : '             ',
+						cssClass: ''
 					});
 				}
 			};
@@ -40,7 +41,6 @@ angular.module('game')
 				vm.keywordBoxes = [];
 				generateKeywordBoxes();
 				vm.success = 0;
-				vm.cssClass = '';
 				vm.playAgain = false;
 			};
 			
@@ -63,16 +63,17 @@ angular.module('game')
 				for(let i = 0; i < vm.keywords.length; i++){
 					if ( vm.keywordBoxes[i].value != vm.keywords[i]) {
 						vm.keywordBoxes[i].value = vm.keywords[i];
+						vm.keywordBoxes[i].cssClass = 'revealed';
+					} else {
+						vm.keywordBoxes[i].cssClass = 'finished';
 					}
 				}
-				vm.cssClass = 'finished';
 				vm.playAgain = true;
 			}
 			
 			vm.checkIfFinished = function(){
 				if (vm.success == vm.keywords.length) {
-					vm.cssClass = 'finished';
-					vm.playAgain = true;
+					vm.reveal();
 				}
 			};
 			
