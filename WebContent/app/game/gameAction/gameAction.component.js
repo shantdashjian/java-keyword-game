@@ -50,6 +50,7 @@ angular.module('game')
 				for(let i = 0; i < vm.keywords.length; i++){
 					if (vm.keywords[i] == vm.keyword && vm.keywordBoxes[i].value != vm.keyword) {
 						vm.keywordBoxes[i].value = vm.keyword;
+						vm.keywordBoxes[i].cssClass = 'finished';
 						vm.keyword = '';
 						vm.success++;
 						vm.checkIfFinished();
