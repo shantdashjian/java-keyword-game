@@ -4,3 +4,8 @@
 .revealed {
 	background-color: #DD0000;
 }
+
+.container {
+	padding: 2em;
+	margin: 0;
+}
