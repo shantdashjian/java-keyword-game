@@ -2,7 +2,7 @@
 
 A game to practice learning all 51 Java keywords, written in AngularJS
 
-![alt text](images/main.png "Main")
+<a href="https://javakeywordgame.netlify.app/"><img src="images/main.png" alt="Java Keyword Game"/></a>
 
 ## In This Document:
 
